@@ -13,7 +13,7 @@
     line-height: 1.8;
   }
   header {
-    background: linear-gradient(135deg, #1A237E, #3949AB);
+    background: linear-gradient(135deg, #2D6BE4, #1A4DB5);
     color: white;
     padding: 48px 24px 36px;
     text-align: center;
@@ -29,11 +29,11 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   }
   h2 {
-    color: #1A237E;
+    color: #2D6BE4;
     font-size: 1.15em;
     margin-bottom: 14px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #E8EAF6;
+    border-bottom: 2px solid #EEF3FD;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -41,16 +41,6 @@
   p { margin-bottom: 12px; font-size: 0.97em; }
   ul { padding-left: 20px; margin-bottom: 12px; }
   li { margin-bottom: 8px; font-size: 0.97em; }
-  .badge {
-    display: inline-block;
-    background: #E8EAF6;
-    color: #1A237E;
-    border-radius: 6px;
-    padding: 2px 10px;
-    font-size: 0.82em;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
   .highlight {
     background: #E8F5E9;
     border-left: 4px solid #43A047;
@@ -67,8 +57,16 @@
     margin: 14px 0;
     font-size: 0.95em;
   }
+  .important {
+    background: #FEF2F2;
+    border-left: 4px solid #EF4444;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: 14px 0;
+    font-size: 0.95em;
+  }
   table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.93em; }
-  th { background: #E8EAF6; color: #1A237E; padding: 10px 14px; text-align: left; }
+  th { background: #EEF3FD; color: #2D6BE4; padding: 10px 14px; text-align: left; }
   td { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; }
   tr:last-child td { border-bottom: none; }
   footer {
@@ -77,7 +75,7 @@
     color: #888;
     font-size: 0.88em;
   }
-  a { color: #3949AB; }
+  a { color: #2D6BE4; }
 </style>
 </head>
 <body>
@@ -85,7 +83,7 @@
 <header>
   <h1>🛡️ Politique de Confidentialité</h1>
   <p>DeuxSecondes — Application de contrôle parental</p>
-  <p style="margin-top:8px; font-size:0.85em;">Dernière mise à jour : avril 2026</p>
+  <p style="margin-top:8px; font-size:0.85em;">Dernière mise à jour : août 2026</p>
 </header>
 
 <div class="container">
@@ -94,21 +92,24 @@
     <h2>📱 Présentation de l'application</h2>
     <p>DeuxSecondes est une application de contrôle parental composée de deux applications distinctes :</p>
     <ul>
-      <li><strong>DeuxSecondes (app enfant)</strong> : installée sur l'appareil de l'enfant, elle applique les restrictions définies par le parent.</li>
+      <li><strong>DeuxSecondes (app enfant)</strong> : installée sur l'appareil de l'enfant mineur, elle applique les restrictions définies par le parent.</li>
       <li><strong>DeuxSecondes Parent</strong> : installée sur l'appareil du parent, elle permet de gérer et surveiller l'appareil enfant à distance.</li>
     </ul>
-    <div class="highlight">
-      Cette application est destinée exclusivement à un usage familial, avec le consentement de toutes les parties. Elle n'est pas destinée à surveiller des personnes majeures à leur insu.
+    <div class="important">
+      <strong>⚠️ Limite d'âge</strong> : Cette application est destinée à la surveillance d'enfants <strong>de moins de 18 ans</strong>, avec leur connaissance et le consentement explicite de leurs parents ou tuteurs légaux. L'utilisation de cette application pour surveiller une personne majeure sans son consentement est strictement interdite et illégale.
     </div>
   </div>
 
   <div class="card">
-    <h2>📊 Données collectées</h2>
-    <p>L'application collecte les données suivantes sur l'appareil enfant :</p>
+    <h2>🔍 Ce que l'application surveille</h2>
+    <div class="warning">
+      <strong>Transparence totale</strong> : L'enfant est informé de la surveillance via une notification permanente visible sur son appareil. Aucune surveillance cachée n'est effectuée.
+    </div>
+    <p>L'application surveille les éléments suivants sur l'appareil de l'enfant :</p>
     <table>
       <tr>
-        <th>Type de donnée</th>
-        <th>Fréquence</th>
+        <th>Type de surveillance</th>
+        <th>Méthode</th>
         <th>Destinataire</th>
       </tr>
       <tr>
@@ -117,67 +118,110 @@
         <td>Parent uniquement</td>
       </tr>
       <tr>
-        <td>📱 Apps installées</td>
+        <td>📱 Applications installées</td>
         <td>À la demande</td>
         <td>Parent uniquement</td>
       </tr>
       <tr>
-        <td>⏱ Temps d'utilisation par app</td>
-        <td>Toutes les 5 minutes</td>
+        <td>⏱ Temps d'utilisation</td>
+        <td>Toutes les 60 secondes</td>
         <td>Parent uniquement</td>
       </tr>
       <tr>
-        <td>🔔 Aperçu de notifications</td>
-        <td>Uniquement si mot-clé détecté</td>
-        <td>Parent uniquement</td>
+        <td>🔔 Contenu des notifications</td>
+        <td>Analyse locale + IA</td>
+        <td>Extrait (80 car. max) si alerte</td>
+      </tr>
+      <tr>
+        <td>👁 Contenu visible à l'écran</td>
+        <td>Service d'accessibilité</td>
+        <td>Extrait si alerte uniquement</td>
       </tr>
     </table>
+  </div>
+
+  <div class="card">
+    <h2>🤖 Analyse par Intelligence Artificielle</h2>
+    <p>Pour détecter le cyberharcèlement, certains extraits de messages (80 caractères maximum) peuvent être analysés par une Intelligence Artificielle :</p>
+    <ul>
+      <li>Le texte est envoyé à <strong>Anthropic</strong> (société américaine) via nos serveurs Firebase pour analyse.</li>
+      <li>Seul un extrait court est transmis — jamais le message complet.</li>
+      <li>L'analyse ne se déclenche que sur les applications de messagerie (WhatsApp, Discord, etc.).</li>
+      <li>Les données transmises à Anthropic sont soumises à leur <a href="https://www.anthropic.com/privacy" target="_blank">politique de confidentialité</a>.</li>
+    </ul>
     <div class="warning">
-      <strong>Concernant les notifications :</strong> le texte est analysé localement sur l'appareil. Seul un extrait de 80 caractères maximum est transmis au parent, et uniquement si un mot-clé interdit est détecté. Le contenu complet des messages n'est jamais stocké ni transmis.
+      En utilisant la fonctionnalité de détection de cyberharcèlement, vous acceptez que des extraits de messages puissent transiter vers des serveurs situés aux États-Unis (Anthropic) et en Europe (Google Firebase).
     </div>
   </div>
 
   <div class="card">
-    <h2>🔒 Utilisation et partage des données</h2>
-    <ul>
-      <li>Les données sont transmises <strong>exclusivement</strong> au compte parent associé.</li>
-      <li>Aucune donnée n'est vendue, partagée avec des tiers ou utilisée à des fins publicitaires.</li>
-      <li>DeuxSecondes n'affiche aucune publicité.</li>
-      <li>Aucun profil commercial n'est créé à partir des données collectées.</li>
-    </ul>
+    <h2>📊 Données collectées</h2>
+    <table>
+      <tr>
+        <th>Donnée</th>
+        <th>Conservation</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>Localisation GPS</td>
+        <td>Écrasée à chaque mise à jour</td>
+        <td>Sécurité de l'enfant</td>
+      </tr>
+      <tr>
+        <td>Temps d'écran</td>
+        <td>Reset chaque nuit à minuit</td>
+        <td>Gestion du temps</td>
+      </tr>
+      <tr>
+        <td>Alertes cyberharcèlement</td>
+        <td>Jusqu'à suppression manuelle</td>
+        <td>Protection de l'enfant</td>
+      </tr>
+      <tr>
+        <td>Apps installées</td>
+        <td>Mise à jour à chaque scan</td>
+        <td>Contrôle parental</td>
+      </tr>
+    </table>
+    <div class="highlight">
+      Aucune donnée n'est vendue, partagée avec des tiers à des fins commerciales, ni utilisée à des fins publicitaires.
+    </div>
   </div>
 
   <div class="card">
     <h2>☁️ Stockage et sécurité</h2>
-    <p>Les données sont stockées dans <strong>Firebase Firestore</strong> (Google Cloud Platform, serveurs européens disponibles) avec des règles de sécurité strictes :</p>
+    <p>Les données sont stockées dans <strong>Firebase Firestore</strong> (Google Cloud Platform) avec des règles de sécurité strictes :</p>
     <ul>
       <li>Seul le parent authentifié peut lire les données de ses enfants.</li>
-      <li>L'authentification est gérée par Firebase Authentication (Google).</li>
-      <li>Les données de localisation et d'utilisation sont <strong>écrasées à chaque mise à jour</strong> — aucun historique n'est conservé au-delà de la journée en cours.</li>
-      <li>Le code PIN est stocké sous forme hachée (PBKDF2 + sel aléatoire) — il est impossible de le retrouver en clair.</li>
+      <li>L'authentification est gérée par Firebase Authentication.</li>
+      <li>Le code PIN est stocké sous forme hachée (PBKDF2 + sel) — impossible à retrouver en clair.</li>
+      <li>Les données de localisation sont écrasées à chaque mise à jour.</li>
     </ul>
-    <p>La politique de confidentialité de Google Firebase est disponible à l'adresse : <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
+    <p>Politique de confidentialité Google Firebase : <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
   </div>
 
   <div class="card">
-    <h2>⚖️ Base légale et consentement</h2>
-    <p>L'utilisation de DeuxSecondes est soumise aux conditions suivantes :</p>
+    <h2>⚖️ Base légale (RGPD)</h2>
+    <p>Le traitement des données repose sur :</p>
     <ul>
-      <li>L'application doit être installée par un <strong>parent ou tuteur légal</strong> sur l'appareil d'un enfant mineur.</li>
-      <li>L'utilisation de cette application pour surveiller une personne majeure sans son consentement explicite est <strong>strictement interdite</strong> et potentiellement illégale selon la législation applicable.</li>
-      <li>En France, la surveillance d'un enfant par ses parents est légale dans le cadre de l'exercice de l'autorité parentale (article 371-1 du Code civil).</li>
+      <li><strong>L'intérêt légitime</strong> du parent à protéger son enfant mineur (Art. 6.1.f RGPD)</li>
+      <li><strong>L'autorité parentale</strong> prévue par l'article 371-1 du Code civil français</li>
+      <li><strong>Le consentement</strong> de l'enfant, informé via la notification permanente affichée sur son appareil</li>
     </ul>
+    <div class="important">
+      Cette application est destinée aux enfants <strong>de moins de 18 ans</strong>. Pour les mineurs de 15 à 18 ans, le RGPD leur reconnaît des droits propres sur leurs données. Nous recommandons d'obtenir leur accord explicite avant installation.
+    </div>
   </div>
 
   <div class="card">
-    <h2>✅ Droits des utilisateurs (RGPD)</h2>
-    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+    <h2>✅ Droits des utilisateurs</h2>
     <ul>
       <li><strong>Droit d'accès</strong> : toutes les données sont visibles dans l'application parent.</li>
-      <li><strong>Droit de suppression</strong> : le parent peut supprimer un appareil enfant depuis l'application, ce qui supprime toutes les données associées dans Firebase.</li>
-      <li><strong>Droit de portabilité</strong> : les données sont accessibles via Firebase Console.</li>
-      <li><strong>Droit d'opposition</strong> : la désinstallation de l'application enfant arrête immédiatement toute collecte de données.</li>
+      <li><strong>Droit de suppression</strong> : le parent peut supprimer un appareil enfant, ce qui supprime toutes ses données dans Firebase.</li>
+      <li><strong>Droit d'opposition</strong> : la désinstallation de l'application enfant arrête immédiatement toute collecte.</li>
+      <li><strong>Droit à la portabilité</strong> : les données sont accessibles via Firebase Console.</li>
     </ul>
+    <p>Pour exercer vos droits, contactez-nous à l'adresse indiquée ci-dessous.</p>
   </div>
 
   <div class="card">
@@ -185,49 +229,53 @@
     <table>
       <tr>
         <th>Permission</th>
-        <th>Usage</th>
+        <th>Utilisation</th>
       </tr>
       <tr>
         <td>Service d'accessibilité</td>
-        <td>Détection de l'app au premier plan pour appliquer les restrictions</td>
+        <td>Détecter l'app au premier plan, lire le contenu visible pour détecter le cyberharcèlement</td>
       </tr>
       <tr>
-        <td>Localisation (premier plan + arrière-plan)</td>
-        <td>Envoi de la position au parent toutes les 15 minutes</td>
+        <td>Localisation (arrière-plan)</td>
+        <td>Envoi GPS toutes les 15 minutes au parent</td>
+      </tr>
+      <tr>
+        <td>Accès aux notifications</td>
+        <td>Analyse des messages pour détecter le cyberharcèlement</td>
       </tr>
       <tr>
         <td>Administrateur de l'appareil</td>
         <td>Protection contre la désinstallation non autorisée</td>
       </tr>
       <tr>
-        <td>Accès aux notifications</td>
-        <td>Analyse locale pour détecter du cyberharcèlement</td>
+        <td>QUERY_ALL_PACKAGES</td>
+        <td>Liste des applications installées pour le contrôle parental</td>
       </tr>
       <tr>
-        <td>QUERY_ALL_PACKAGES</td>
-        <td>Liste des apps installées pour le contrôle parental</td>
+        <td>Données d'utilisation</td>
+        <td>Temps passé sur chaque application</td>
       </tr>
     </table>
   </div>
 
   <div class="card">
-    <h2>✏️ Modifications de cette politique</h2>
-    <p>Nous nous réservons le droit de modifier cette politique de confidentialité. Toute modification sera notifiée via une mise à jour de l'application. La date de dernière mise à jour est indiquée en haut de cette page.</p>
+    <h2>✏️ Modifications</h2>
+    <p>Nous nous réservons le droit de modifier cette politique. Toute modification sera notifiée via une mise à jour de l'application. La date de dernière mise à jour est indiquée en haut de cette page.</p>
   </div>
 
   <div class="card">
     <h2>📬 Contact</h2>
-    <p>Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits :</p>
-    <p>
-      <strong>Email :</strong> <a href="mailto:[VOTRE_EMAIL]">[VOTRE_EMAIL]</a>
-    </p>
+    <p>Pour toute question ou pour exercer vos droits RGPD :</p>
+    <p><strong>Responsable du traitement :</strong> Raftel Developpement</p>
+    <p><strong>SIRET :</strong> 102 032 976 00031</p>
+    <p><strong>Email :</strong> <a href="mailto:rafteldeveloppement@proton.me">rafteldeveloppement@proton.me</a></p>
   </div>
 
 </div>
 
 <footer>
-  <p>© 2026 DeuxSecondes — Tous droits réservés</p>
-  <p style="margin-top:8px;">Application de contrôle parental — Usage familial uniquement</p>
+  <p>© 2026 Raftel Developpement — Tous droits réservés</p>
+  <p style="margin-top:8px;">DeuxSecondes — Application de contrôle parental pour enfants de moins de 18 ans</p>
 </footer>
 
 </body>
