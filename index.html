@@ -125,12 +125,12 @@
     <li>l'analyse ne concerne que les applications de messagerie et réseaux sociaux ;</li>
     <li>les extraits ne sont pas utilisés par Anthropic pour entraîner ses modèles, conformément à ses <a href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">conditions commerciales</a> et à sa <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">politique de confidentialité</a>.</li>
   </ul>
-  <p>Ce transfert hors de l'Union européenne est encadré par les garanties prévues par le RGPD (clauses contractuelles types de la Commission européenne). L'extrait transite par nos serveurs Firebase, situés eux aussi aux États-Unis (voir section 5).</p>
+  <p>Ce transfert hors de l'Union européenne est encadré par les garanties prévues par le RGPD (clauses contractuelles types de la Commission européenne).</p>
 
   <h2>5. Hébergement et sécurité</h2>
   <ul>
-    <li>Les données sont hébergées et traitées par <strong>Google Firebase</strong> (Firestore, Authentication, Cloud Functions, Cloud Messaging), dans des centres de données de Google situés <strong>aux États-Unis</strong>.</li>
-    <li>Ce transfert hors de l'Union européenne est encadré par la certification de Google LLC au <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener">cadre de protection des données UE–États-Unis</a> (décision d'adéquation de la Commission européenne du 10 juillet 2023) et par les clauses contractuelles types intégrées aux conditions de traitement des données de Google Cloud.</li>
+    <li>La base de données (<strong>Cloud Firestore</strong>), qui contient les réglages, positions, temps d'écran et alertes, est hébergée par Google dans l'<strong>Union européenne</strong> (multi-région « eur3 » : Belgique et Pays-Bas).</li>
+    <li>Certains services techniques de Google Firebase peuvent traiter des données aux <strong>États-Unis</strong> : l'authentification (adresse e-mail), l'envoi des notifications push et les fonctions serveur qui transmettent l'extrait à analyser. Ces transferts sont encadrés par la certification de Google LLC au <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener">cadre de protection des données UE–États-Unis</a> (décision d'adéquation de la Commission européenne du 10 juillet 2023) et par les clauses contractuelles types intégrées aux conditions de traitement des données de Google Cloud.</li>
     <li>Des règles d'accès strictes garantissent que seul le parent authentifié peut consulter les données de ses appareils enfants.</li>
     <li>Toutes les données sont chiffrées pendant leur transfert (HTTPS/TLS).</li>
     <li>Le code PIN parental est stocké sous forme hachée (PBKDF2 avec sel) et ne peut pas être retrouvé en clair.</li>
